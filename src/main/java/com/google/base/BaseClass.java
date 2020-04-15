@@ -19,7 +19,8 @@ public class BaseClass {
 
 	@BeforeMethod
 	@Parameters({ "browser" })
-	public void setUp(@Optional("ff") String browserName) throws IOException {
+	public void setUp(@Optional("ff") String browserName) throws IOException
+	{
 		if (browserName.equalsIgnoreCase("ff")) {
 			System.setProperty("webdriver.gecko.driver", "src/test/resources/driver/geckodriver.exe");
 			driver = new FirefoxDriver();
